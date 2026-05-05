@@ -342,48 +342,48 @@
       margin-top: 32px;
     }
 
-    .voice-card {
-      position: relative;
-      padding-top: 38px;
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
-    .quote {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      font-size: 48px;
-      color: #c5d8ec;
-      line-height: 1;
+    .case-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .case-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #d6e5f7;
+    }
+
+    .case-company {
+      margin: 0;
+      font-size: 15px;
       font-weight: 900;
-    }
-
-    .company {
-      margin-top: 18px;
       color: var(--navy);
-      font-weight: 900;
-      font-size: 14px;
-      text-align: right;
+      line-height: 1.45;
     }
 
-    .logos {
-      margin-top: 22px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 12px;
+    .case-role {
+      margin: 2px 0 10px;
+      font-size: 13px;
+      color: #4f6685;
+      font-weight: 700;
     }
 
-    .logo-placeholder {
-      height: 48px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #e9eef5, #f6f8fb);
-      display: grid;
-      place-items: center;
-      color: #a8b4c2;
-      font-weight: 900;
+    .case-comment {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 600;
     }
 
     .faq {
@@ -545,9 +545,6 @@
         bottom: -15px;
         transform: translateX(-50%);
       }
-      .logos {
-        grid-template-columns: repeat(3, 1fr);
-      }
       .section-number {
         position: static;
         margin-bottom: 12px;
@@ -560,14 +557,15 @@
 
     @media (max-width: 640px) {
       .header-inner {
-        padding: 12px 16px;
+        padding: 8px 12px;
+        gap: 10px;
       }
       .logo {
-        font-size: 16px;
+        font-size: 14px;
       }
       .btn-small {
-        padding: 8px 12px;
-        font-size: 12px;
+        padding: 7px 10px;
+        font-size: 11px;
       }
       .section {
         padding: 40px 18px;
@@ -578,13 +576,30 @@
       .card {
         padding: 20px;
       }
+      .hero {
+        margin-top: 0;
+      }
       .hero-image {
         overflow: hidden;
       }
       .hero-image img {
-        width: 150%;
+        width: 128%;
         max-width: none;
-        margin-left: -2%;
+        margin-left: -1%;
+      }
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-card {
+        grid-template-columns: 62px 1fr;
+        gap: 12px;
+      }
+      .case-photo {
+        width: 62px;
+        height: 62px;
+      }
+      .case-comment {
+        font-size: 14px;
       }
       .trust {
         grid-template-columns: 1fr 1fr;
@@ -728,32 +743,33 @@
 
     <section class="section" id="case">
       <div class="section-number">05</div>
-      <h2 class="section-title">導入企業の声</h2>
-      <div class="grid grid-3">
-        <div class="card voice-card">
-          <div class="quote">“</div>
-          <p>月次の数字が出るまでの時間が短縮され、案件別の利益を早く確認できるようになりました。</p>
-          <div class="company">IT受託開発会社 A社</div>
-        </div>
-        <div class="card voice-card">
-          <div class="quote">“</div>
-          <p>請求書発行と入金確認の負担が減り、営業活動と採用に集中できるようになりました。</p>
-          <div class="company">SES企業 B社</div>
-        </div>
-        <div class="card voice-card">
-          <div class="quote">“</div>
-          <p>外注費の管理が整理され、どの案件が利益を出しているのか見えるようになりました。</p>
-          <div class="company">システム開発会社 C社</div>
-        </div>
-      </div>
-      <div class="logos" aria-label="導入企業ロゴ掲載エリア">
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
-        <div class="logo-placeholder">LOGO</div>
+      <h2 class="section-title">導入実績（担当者コメント）</h2>
+      <p class="lead">SES・受託開発会社のご担当者様から、導入後の変化についてお声をいただいています（※掲載内容はイメージです）。</p>
+      <div class="case-grid">
+        <article class="card case-card">
+          <img class="case-photo" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=200&q=80" alt="クラウドリンクス株式会社 取締役COO 山田様" loading="lazy" />
+          <div>
+            <h3 class="case-company">クラウドリンクス株式会社</h3>
+            <p class="case-role">取締役COO / 山田 亮 様</p>
+            <p class="case-comment">請求・入金・外注費の運用を整備したことで、月次締めが約10日早まり、案件別粗利を営業会議で即確認できるようになりました。</p>
+          </div>
+        </article>
+        <article class="card case-card">
+          <img class="case-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="ネクストコード株式会社 管理部長 佐藤様" loading="lazy" />
+          <div>
+            <h3 class="case-company">ネクストコード株式会社</h3>
+            <p class="case-role">管理部長 / 佐藤 彩 様</p>
+            <p class="case-comment">属人化していた経理業務が標準化され、急な担当変更があっても運用が止まらない体制になり、経営層へのレポート品質も安定しました。</p>
+          </div>
+        </article>
+        <article class="card case-card">
+          <img class="case-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="ビルドウェーブ株式会社 代表取締役 高橋様" loading="lazy" />
+          <div>
+            <h3 class="case-company">ビルドウェーブ株式会社</h3>
+            <p class="case-role">代表取締役 / 高橋 恒一 様</p>
+            <p class="case-comment">数字の可視化で不採算案件の見直しが進み、3か月で全社粗利率が改善。採用・営業に時間を振り向けられるようになりました。</p>
+          </div>
+        </article>
       </div>
     </section>
 
