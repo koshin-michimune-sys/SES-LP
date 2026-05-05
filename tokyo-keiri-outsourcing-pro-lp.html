@@ -26,7 +26,7 @@
       font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
       color: var(--text);
       background: #fff;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     a {
@@ -70,7 +70,7 @@
       display: flex;
       align-items: center;
       gap: 28px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--navy);
     }
@@ -80,7 +80,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 13px 26px;
+      padding: 14px 28px;
       border-radius: 8px;
       background: linear-gradient(135deg, var(--blue), var(--blue2));
       color: #fff;
@@ -97,8 +97,8 @@
     }
 
     .btn-small {
-      padding: 10px 18px;
-      font-size: 13px;
+      padding: 11px 20px;
+      font-size: 14px;
       box-shadow: none;
     }
 
@@ -121,13 +121,13 @@
     .section {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 64px 24px;
+      padding: 54px 24px;
       position: relative;
     }
 
     .section-number {
       position: absolute;
-      top: 44px;
+      top: 36px;
       left: 24px;
       font-size: 44px;
       line-height: 1;
@@ -137,8 +137,8 @@
 
     .section-title {
       text-align: center;
-      margin: 0 0 34px;
-      font-size: 28px;
+      margin: 0 0 28px;
+      font-size: 32px;
       line-height: 1.45;
       color: var(--navy);
       font-weight: 900;
@@ -146,14 +146,14 @@
 
     .lead {
       max-width: 850px;
-      margin: 0 auto 28px;
+      margin: 0 auto 22px;
       color: var(--muted);
       font-weight: 600;
     }
 
     .grid {
       display: grid;
-      gap: 18px;
+      gap: 14px;
     }
 
     .grid-3 {
@@ -168,7 +168,7 @@
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 24px;
+      padding: 20px;
       box-shadow: 0 8px 24px rgba(7, 40, 87, .06);
     }
 
@@ -197,7 +197,7 @@
     .card p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
     }
 
@@ -215,50 +215,84 @@
     }
 
     .flow {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      position: relative;
+      padding: 6px 0;
     }
 
     .flow-item {
-      flex: 1;
+      position: relative;
       text-align: center;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px 10px;
-      font-weight: 800;
+      background: linear-gradient(160deg, #ffffff, #f6f9fe);
+      border: 1px solid #cfdff2;
+      border-radius: 14px;
+      padding: 14px 10px 12px;
       color: var(--navy);
-      font-size: 13px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      min-height: 132px;
+      min-height: 138px;
       justify-content: center;
-      box-shadow: 0 8px 20px rgba(7, 40, 87, .06);
+      box-shadow: 0 8px 20px rgba(7, 40, 87, .08);
+    }
+
+    .flow-step {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #5f7da2;
     }
 
     .flow-illust {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #eff6ff, #f8fbff);
-      border: 1px solid #d4e3f4;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #e9f2ff, #f9fcff);
+      border: 1px solid #cadef5;
       display: grid;
       place-items: center;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1;
     }
 
     .flow-label {
-      line-height: 1.5;
+      line-height: 1.45;
+      font-size: 15px;
+      font-weight: 800;
     }
 
-    .flow-arrow {
-      color: #89a7c7;
+    .flow-item::after {
+      content: "→";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #8eaaca;
+      font-size: 20px;
       font-weight: 900;
+      z-index: 2;
+    }
+
+    .flow-item:last-child::after {
+      content: none;
+    }
+
+    .flow-item.is-result {
+      background: linear-gradient(145deg, #072857, #0f3f79);
+      border-color: #072857;
+      color: #fff;
+    }
+
+    .flow-item.is-result .flow-step {
+      color: #c8ddf5;
+    }
+
+    .flow-item.is-result .flow-illust {
+      background: rgba(255,255,255,.15);
+      border-color: rgba(255,255,255,.32);
     }
 
     .service-card {
@@ -368,6 +402,7 @@
 
     summary {
       cursor: pointer;
+      font-size: 17px;
       font-weight: 900;
       color: var(--navy);
       list-style: none;
@@ -391,7 +426,7 @@
       margin: 12px 0 0;
       color: var(--muted);
       font-weight: 600;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .cta {
@@ -481,7 +516,7 @@
       background: #031b3f;
       color: #dce8f5;
       text-align: center;
-      padding: 24px;
+      padding: 20px;
       font-size: 13px;
     }
 
@@ -497,10 +532,18 @@
         grid-template-columns: 1fr;
       }
       .flow {
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
-      .flow-arrow {
-        transform: rotate(90deg);
+      .flow-item {
+        min-height: 116px;
+      }
+      .flow-item::after {
+        content: "↓";
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -15px;
+        transform: translateX(-50%);
       }
       .logos {
         grid-template-columns: repeat(3, 1fr);
@@ -511,7 +554,7 @@
       }
       .section-title {
         text-align: left;
-        font-size: 24px;
+        font-size: 28px;
       }
     }
 
@@ -527,10 +570,10 @@
         font-size: 12px;
       }
       .section {
-        padding: 44px 18px;
+        padding: 40px 18px;
       }
       .grid {
-        gap: 14px;
+        gap: 12px;
       }
       .card {
         padding: 20px;
@@ -547,17 +590,14 @@
         grid-template-columns: 1fr 1fr;
       }
       .lead {
-        font-size: 14px;
-        line-height: 1.9;
+        font-size: 15px;
+        line-height: 1.85;
       }
       .problem-card {
         min-height: auto;
       }
-      .flow-item {
-        min-height: 110px;
-      }
       .cta h2 {
-        font-size: 24px;
+        font-size: 26px;
       }
       .form {
         padding: 20px;
@@ -609,12 +649,32 @@
             <p class="lead" style="margin-left:0;">当サービスでは、IT業界特有の商流を理解したうえで、経理業務の代行だけでなく、案件別の利益管理までサポートします。</p>
           </div>
           <div>
-            <div class="flow">
-              <div class="flow-item"><div class="flow-illust" aria-hidden="true">📝</div><div class="flow-label">契約形態</div></div><div class="flow-arrow">→</div>
-              <div class="flow-item"><div class="flow-illust" aria-hidden="true">⏱️</div><div class="flow-label">清算時間</div></div><div class="flow-arrow">→</div>
-              <div class="flow-item"><div class="flow-illust" aria-hidden="true">💸</div><div class="flow-label">外注費</div></div><div class="flow-arrow">→</div>
-              <div class="flow-item"><div class="flow-illust" aria-hidden="true">📅</div><div class="flow-label">入金タイミング</div></div><div class="flow-arrow">→</div>
-              <div class="flow-item"><div class="flow-illust" aria-hidden="true">🤝</div><div class="flow-label">支払い条件</div></div>
+            <div class="flow" aria-label="経理業務の可視化フロー">
+              <div class="flow-item">
+                <div class="flow-step">STEP 01</div>
+                <div class="flow-illust" aria-hidden="true">🧾</div>
+                <div class="flow-label">請求書発行</div>
+              </div>
+              <div class="flow-item">
+                <div class="flow-step">STEP 02</div>
+                <div class="flow-illust" aria-hidden="true">💳</div>
+                <div class="flow-label">入金確認</div>
+              </div>
+              <div class="flow-item">
+                <div class="flow-step">STEP 03</div>
+                <div class="flow-illust" aria-hidden="true">🏢</div>
+                <div class="flow-label">外注費管理</div>
+              </div>
+              <div class="flow-item">
+                <div class="flow-step">STEP 04</div>
+                <div class="flow-illust" aria-hidden="true">📊</div>
+                <div class="flow-label">案件別・プロジェクト別<br>粗利管理</div>
+              </div>
+              <div class="flow-item is-result">
+                <div class="flow-step">STEP 05</div>
+                <div class="flow-illust" aria-hidden="true">🚀</div>
+                <div class="flow-label">経営判断に使える<br>数字の見える化</div>
+              </div>
             </div>
           </div>
         </div>
