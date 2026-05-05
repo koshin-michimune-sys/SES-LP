@@ -226,11 +226,34 @@
       text-align: center;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 16px 10px;
+      border-radius: 18px;
+      padding: 14px 10px;
       font-weight: 800;
       color: var(--navy);
       font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-height: 132px;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(7, 40, 87, .06);
+    }
+
+    .flow-illust {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #eff6ff, #f8fbff);
+      border: 1px solid #d4e3f4;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .flow-label {
+      line-height: 1.5;
     }
 
     .flow-arrow {
@@ -523,6 +546,22 @@
       .trust {
         grid-template-columns: 1fr 1fr;
       }
+      .lead {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+      .problem-card {
+        min-height: auto;
+      }
+      .flow-item {
+        min-height: 110px;
+      }
+      .cta h2 {
+        font-size: 24px;
+      }
+      .form {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -571,11 +610,11 @@
           </div>
           <div>
             <div class="flow">
-              <div class="flow-item">契約形態</div><div class="flow-arrow">→</div>
-              <div class="flow-item">清算時間</div><div class="flow-arrow">→</div>
-              <div class="flow-item">外注費</div><div class="flow-arrow">→</div>
-              <div class="flow-item">入金タイミング</div><div class="flow-arrow">→</div>
-              <div class="flow-item">支払い条件</div>
+              <div class="flow-item"><div class="flow-illust" aria-hidden="true">📝</div><div class="flow-label">契約形態</div></div><div class="flow-arrow">→</div>
+              <div class="flow-item"><div class="flow-illust" aria-hidden="true">⏱️</div><div class="flow-label">清算時間</div></div><div class="flow-arrow">→</div>
+              <div class="flow-item"><div class="flow-illust" aria-hidden="true">💸</div><div class="flow-label">外注費</div></div><div class="flow-arrow">→</div>
+              <div class="flow-item"><div class="flow-illust" aria-hidden="true">📅</div><div class="flow-label">入金タイミング</div></div><div class="flow-arrow">→</div>
+              <div class="flow-item"><div class="flow-illust" aria-hidden="true">🤝</div><div class="flow-label">支払い条件</div></div>
             </div>
           </div>
         </div>
