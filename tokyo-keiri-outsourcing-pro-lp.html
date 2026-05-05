@@ -51,17 +51,17 @@
     .header-inner {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 8px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      gap: 12px;
     }
 
     .logo {
       font-weight: 900;
-      letter-spacing: .03em;
-      font-size: 22px;
+      letter-spacing: .02em;
+      font-size: 18px;
       color: var(--navy);
       white-space: nowrap;
     }
@@ -69,10 +69,17 @@
     .nav {
       display: flex;
       align-items: center;
-      gap: 28px;
-      font-size: 15px;
-      font-weight: 700;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 800;
       color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .tel-link {
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: .01em;
     }
 
     .btn {
@@ -350,17 +357,16 @@
 
     .case-card {
       display: grid;
-      grid-template-columns: 72px 1fr;
       gap: 14px;
       align-items: start;
     }
 
     .case-photo {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
       object-fit: cover;
-      border: 2px solid #d6e5f7;
+      border: 1px solid #d6e5f7;
     }
 
     .case-company {
@@ -521,9 +527,6 @@
     }
 
     @media (max-width: 980px) {
-      .nav a:not(.btn) {
-        display: none;
-      }
       .grid-3,
       .grid-4,
       .benefit-list,
@@ -557,18 +560,22 @@
 
     @media (max-width: 640px) {
       .header-inner {
-        padding: 8px 12px;
-        gap: 10px;
+        padding: 6px 10px;
+        gap: 8px;
       }
       .logo {
-        font-size: 14px;
+        font-size: 12px;
       }
-      .btn-small {
-        padding: 7px 10px;
+      .nav {
+        gap: 6px;
         font-size: 11px;
       }
+      .btn-small {
+        padding: 6px 8px;
+        font-size: 10px;
+      }
       .section {
-        padding: 40px 18px;
+        padding: 32px 16px;
       }
       .grid {
         gap: 12px;
@@ -583,20 +590,15 @@
         overflow: hidden;
       }
       .hero-image img {
-        width: 128%;
+        width: 122%;
         max-width: none;
-        margin-left: -1%;
+        margin-left: -8%;
       }
       .case-grid {
         grid-template-columns: 1fr;
       }
-      .case-card {
-        grid-template-columns: 62px 1fr;
-        gap: 12px;
-      }
       .case-photo {
-        width: 62px;
-        height: 62px;
+        height: 160px;
       }
       .case-comment {
         font-size: 14px;
@@ -605,14 +607,19 @@
         grid-template-columns: 1fr 1fr;
       }
       .lead {
-        font-size: 15px;
-        line-height: 1.85;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
       }
       .problem-card {
         min-height: auto;
       }
       .cta h2 {
-        font-size: 26px;
+        font-size: 22px;
+        line-height: 1.4;
       }
       .form {
         padding: 20px;
@@ -624,12 +631,9 @@
   <header class="header">
     <div class="header-inner">
       <a class="logo" href="#">東京経理アウトソーシングプロ</a>
-      <nav class="nav" aria-label="メインナビゲーション">
-        <a href="#service">サービス内容</a>
-        <a href="#case">導入事例</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">お問い合わせ</a>
-        <a class="btn btn-small" href="#contact">無料相談・お見積り</a>
+      <nav class="nav" aria-label="ヘッダー">
+        <a class="btn btn-small" href="#contact">無料相談</a>
+        <a class="tel-link" href="tel:0120949556">0120-949-556</a>
       </nav>
     </div>
   </header>
@@ -747,27 +751,27 @@
       <p class="lead">SES・受託開発会社のご担当者様から、導入後の変化についてお声をいただいています（※掲載内容はイメージです）。</p>
       <div class="case-grid">
         <article class="card case-card">
-          <img class="case-photo" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=200&q=80" alt="クラウドリンクス株式会社 取締役COO 山田様" loading="lazy" />
+          <img class="case-photo" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=300&q=80" alt="会議中のビジネスパーソン" loading="lazy" />
           <div>
-            <h3 class="case-company">クラウドリンクス株式会社</h3>
-            <p class="case-role">取締役COO / 山田 亮 様</p>
-            <p class="case-comment">請求・入金・外注費の運用を整備したことで、月次締めが約10日早まり、案件別粗利を営業会議で即確認できるようになりました。</p>
+            <h3 class="case-company">株式会社A</h3>
+            <p class="case-role">管理本部責任者（仮）</p>
+            <p class="case-comment">月次締めの工程を整理でき、経営会議までに案件別粗利を確認できる体制へ。判断スピードが上がりました。</p>
           </div>
         </article>
         <article class="card case-card">
-          <img class="case-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="ネクストコード株式会社 管理部長 佐藤様" loading="lazy" />
+          <img class="case-photo" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=300&q=80" alt="オフィスで打ち合わせする担当者" loading="lazy" />
           <div>
-            <h3 class="case-company">ネクストコード株式会社</h3>
-            <p class="case-role">管理部長 / 佐藤 彩 様</p>
-            <p class="case-comment">属人化していた経理業務が標準化され、急な担当変更があっても運用が止まらない体制になり、経営層へのレポート品質も安定しました。</p>
+            <h3 class="case-company">株式会社B</h3>
+            <p class="case-role">経営企画マネージャー（仮）</p>
+            <p class="case-comment">請求・入金・支払いの運用が標準化され、担当変更時の引き継ぎ負荷が大幅に軽減。属人化の不安がなくなりました。</p>
           </div>
         </article>
         <article class="card case-card">
-          <img class="case-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="ビルドウェーブ株式会社 代表取締役 高橋様" loading="lazy" />
+          <img class="case-photo" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300&q=80" alt="執務スペースで働く人物の後ろ姿" loading="lazy" />
           <div>
-            <h3 class="case-company">ビルドウェーブ株式会社</h3>
-            <p class="case-role">代表取締役 / 高橋 恒一 様</p>
-            <p class="case-comment">数字の可視化で不採算案件の見直しが進み、3か月で全社粗利率が改善。採用・営業に時間を振り向けられるようになりました。</p>
+            <h3 class="case-company">株式会社C</h3>
+            <p class="case-role">代表取締役（仮）</p>
+            <p class="case-comment">不採算案件の早期把握ができるようになり、改善アクションを即実行。採用・営業に使える時間も増えました。</p>
           </div>
         </article>
       </div>
